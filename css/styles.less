@@ -1,0 +1,554 @@
+// out: styles.css, sourcemap: false, compress: false
+
+@black: #231f20;
+@white: #fff;
+@blue: #2bb3bb;
+@pink: #af025c;
+
+@sansFontFamily: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  background-color: fade(@black, 15%);
+  color: @black;
+  font-family: @sansFontFamily;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.4;
+  min-height: 740px;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s;
+  box-sizing: border-box;
+
+  &.present, &.active, &.past {
+    opacity: 1;
+  }
+}
+
+.slide {
+  width: 1200px;
+
+  > .content {
+    position: absolute;
+    padding: 25px 40px;
+    margin: 0;
+
+    &::before {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border: 20px solid transparent;
+      position: absolute;
+      top: 10px;
+    }
+  }
+
+  &.left > .content {
+    left: 0;
+    background-color: @blue;
+    color: @white;
+
+    &::before {
+      left: -60px;
+      border-right: 40px solid @blue;
+    }
+  }
+  &.right > .content {
+    right: 0;
+    background-color: @white;
+
+    &::before {
+      right: -60px;
+      border-left: 40px solid @white;
+    }
+  }
+}
+
+#logo {
+  transition: all 0.6s;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  path, rect {
+    fill: @black;
+  }
+
+  .impress-on-title & {
+    bottom: 250px;
+    margin-left: -200px;
+    width: 400px;
+  }
+  .impress-on-scott-logic & {
+    bottom: 50%;
+    margin-left: -250px;
+    width: 500px;
+  }
+  .impress-on-thank-you & {
+    bottom: 80%;
+    margin-left: -175px;
+    width: 350px;
+  }
+}
+
+#title {
+  height: 400px;
+  font-size: 2.1em;
+  > .content {
+    width: 1120px;
+  }
+
+  .impress-on-title2 & {
+    opacity: 1;
+  }
+}
+
+.impress-on-scott-logic .step {
+  opacity: 0;
+}
+
+
+/* Set the Scene */
+
+#smartphone,
+#whatsapp,
+#messenger,
+#skype,
+#other-chat {
+  height: 100px;
+}
+
+#messenger-overtakes-social {
+  height: 600px;
+  font-size: 0;
+  > .content {
+    width: 800px;
+
+    .source {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 200px;
+    }
+  }
+}
+
+#whatsapp-stats1 {
+  height: 200px;
+  font-size: 0;
+  > .content img {
+    width: 400px;
+  }
+}
+
+#whatsapp-stats2,
+#whatsapp-stats3,
+#whatsapp-stats4 {
+  height: 150px;
+}
+
+
+/* Banking */
+
+#thats-nice {
+  height: 300px;
+}
+
+#uber-on-messenger {
+  height: 700px;
+  font-size: 0;
+  > .content {
+    width: 1120px;
+
+    > video {
+      width: 100%;
+    }
+  }
+}
+
+#wechat {
+  height: 250px;
+  font-size: 0;
+  > .content {
+    width: 200px;
+  }
+}
+
+#icbc {
+  height: 250px;
+  font-size: 0;
+  > .content {
+    width: 500px;
+  }
+}
+
+#show-something {
+  height: 200px;
+}
+
+#slack {
+  height: 200px;
+  font-size: 0;
+  > .content img {
+    width: 450px;
+  }
+}
+
+#slash-command-demo {
+  height: 200px;
+  font-size: 0;
+  svg {
+    width: 100px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+  }
+}
+
+#so-what {
+  height: 200px;
+}
+#in-context1 {
+  height: 200px;
+  font-size: 0;
+  > .content {
+    width: 1000px;
+  }
+}
+#in-context2 {
+  height: 200px;
+  font-size: 0;
+  > .content {
+    width: 550px;
+  }
+}
+
+#evidence-of-convenience {
+  height: 650px;
+  > .content {
+    width: 850px;
+  }
+}
+
+
+/* Conversation */
+
+#making-it-conversational {
+  height: 200px;
+}
+
+#choose-your-own-adventure {
+  height: 700px;
+  font-size: 0;
+  > .content img {
+    width: 400px;
+  }
+}
+
+#text-adventure {
+  height: 500px;
+  font-size: 0;
+  > .content img {
+    width: 800px;
+  }
+}
+
+#monkey-island {
+  height: 700px;
+  font-size: 0;
+  > .content img {
+    width: 1000px;
+  }
+}
+
+#starship-titanic {
+  height: 700px;
+  font-size: 0;
+  > .content img {
+    width: 800px;
+  }
+}
+
+#bot {
+  height: 500px;
+  font-size: 0;
+  > .content {
+    width: 400px;
+  }
+}
+
+#product-hunt,
+#product-hunt-play {
+  height: 800px;
+  > .content {
+    width: 1000px;
+
+    > video {
+      width: 100%;
+    }
+  }
+}
+
+#lark,
+#lark-play {
+  height: 700px;
+  font-size: 0;
+  > .content {
+    width: 322px;
+
+    > video {
+      width: 100%;
+    }
+  }
+}
+
+#build-chat-app,
+#build-on-existing-apps {
+  height: 200px;
+}
+
+#whatsapp-quote {
+  height: 600px;
+  > .content {
+
+    blockquote {
+      padding: 0 20px;
+      margin: 20px 0;
+      font-size: 0.8em;
+      border-left: 10px solid fade(@black, 25%);
+      quotes: "\201C""\201D""\2018""\2019";
+
+      &:before {
+        color: fade(@black, 40%);
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        vertical-align: -0.4em;
+      }
+      p {
+        display: inline;
+        font-style: italic;
+        em {
+          font-style: normal;
+        }
+      }
+      footer {
+        .logo {
+          width: 300px;
+          display: block;
+          margin: 20px 20px 0 20px;
+        }
+        .date {
+          font-size: 0.7em;
+          font-style: normal;
+          margin-left: 100px;
+        }
+      }
+    }
+  }
+}
+
+#slash-pa-demo {
+  height: 200px;
+  font-size: 0;
+  svg {
+    width: 100px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+/* Technical */
+
+#sounds-tricky {
+  height: 200px;
+}
+
+#architecture {
+  height: 700px;
+  font-size: 0;
+  > .content {
+    width: 900px;
+  }
+}
+#on-top-of-existing-systems,
+#interchange-with-people {
+  height: 700px;
+  font-size: 0;
+  > .content {
+    width: 900px;
+  }
+}
+
+
+/* Security */
+
+#what-about-security {
+  height: 200px;
+}
+
+#malice {
+  height: 300px;
+  font-size: 0;
+  > .content {
+    width: 250px;
+  }
+}
+
+#limits {
+  height: 200px;
+}
+
+#touchid {
+  height: 500px;
+  font-size: 0;
+  > .content img {
+    width: 700px;
+  }
+}
+
+#cloud {
+  height: 700px;
+  font-size: 0;
+  > .content {
+    width: 900px;
+  }
+}
+
+#sms-contactless {
+  height: 200px;
+}
+
+#cloud2 {
+  height: 300px;
+  font-size: 0;
+  > .content {
+    width: 300px;
+  }
+}
+
+#channel-shifting {
+  height: 500px;
+  font-size: 0;
+  > .content img {
+    width: 500px;
+  }
+}
+
+#slash-channel-shifting-demo {
+  height: 200px;
+  font-size: 0;
+  svg {
+    width: 100px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+/* why conversation */
+
+#why-conversation {
+  height: 300px;
+}
+
+#voice {
+  height: 200px;
+}
+
+#low-hanging-fruit {
+  height: 200px;
+}
+
+#history-of-computing {
+  height: 200px;
+  font-size: 0;
+  > .content {
+    width: 880px;
+  }
+}
+
+#cli-gui-nui {
+  height: 200px;
+  font-size: 0;
+  > .content {
+    width: 700px;
+  }
+}
+
+#natural-user-interface {
+  height: 200px;
+}
+
+#slash-panic-demo {
+  height: 200px;
+  font-size: 0;
+  svg {
+    width: 100px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+/* Summary */
+
+#title-summary {
+  height: 200px;
+}
+
+#should-be {
+  height: 200px;
+}
+
+#omni-channel-touching {
+  height: 700px;
+  > .content {
+    width: 800px
+  }
+}
+
+#omni-channel-embracing {
+  height: 600px;
+  > .content {
+    width: 680px;
+  }
+}
+
+#its-up-to-you {
+  height: 200px;
+}
+
+#agree {
+  height: 200px;
+}
+
+
+#thank-you {
+  text-align: center;
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    margin-top: 3em;
+  }
+  h3 {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+  }
+}
