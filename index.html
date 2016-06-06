@@ -40,43 +40,43 @@
 
   <!-- set the scene - 3 MINS -->
 
-  <div id="smartphone" class="step slide right capture" data-x="0" data-y="60">
+  <div id="smartphone" class="step slide right" data-x="0" data-y="280">
     <!-- who here has a smartphone -->
     <div class="content">Smartphone?</div>
   </div>
 
-  <div id="smartphone-answer" class="step slide left" data-x="0" data-y="150">
-    <div id="smartphone-capture" class="content answer"></div>
+  <div id="smartphone-answer" class="step slide left capture" data-x="0" data-y="650">
+    <div id="smartphone-answer-capture" class="content answer"></div>
   </div>
 
-  <div id="whatsapp" class="step slide right capture" data-x="0" data-y="200">
+  <div id="whatsapp" class="step slide right" data-x="0" data-y="970">
     <!-- who here uses whatsapp -->
     <div class="content">WhatsApp?</div>
   </div>
 
-  <div id="whatsapp-answer" class="step slide left" data-x="0" data-y="300">
-    <div id="whatsapp-capture" class="content answer"></div>
+  <div id="whatsapp-answer" class="step slide left capture" data-x="0" data-y="1340">
+    <div id="whatsapp-answer-capture" class="content answer"></div>
   </div>
 
-  <div id="messenger" class="step slide right capture" data-x="0" data-y="340">
+  <div id="messenger" class="step slide right" data-x="0" data-y="1660">
     <!-- who here uses facebook messenger -->
     <div class="content">Facebook Messenger?</div>
   </div>
 
-  <div id="messenger-answer" class="step slide left" data-x="0" data-y="400">
-    <div id="messenger-capture" class="content answer"></div>
+  <div id="messenger-answer" class="step slide left capture" data-x="0" data-y="2030">
+    <div id="messenger-answer-capture" class="content answer"></div>
   </div>
 
-  <div id="other-chat" class="step slide right capture" data-x="0" data-y="480">
+  <div id="other-chat" class="step slide right" data-x="0" data-y="2350">
     <!-- who here uses some other kind of chat app at work or home -->
     <div class="content">Skype, Viber, WeChat, Kik, LINE, Slack ...?</div>
   </div>
 
-  <div id="other-messenger-answer" class="step slide left" data-x="0" data-y="300">
-    <div id="other-messenger-capture" class="content answer"></div>
+  <div id="other-chat-answer" class="step slide left capture" data-x="0" data-y="2720">
+    <div id="other-chat-answer-capture" class="content answer"></div>
   </div>
 
-  <div id="messenger-overtakes-social" class="step slide right" data-x="0" data-y="870">
+  <div id="messenger-overtakes-social" class="step slide right" data-x="0" data-y="3290">
     <div class="content">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 908.44 563.8">
         <text transform="translate(818.62 49.68)" font-size="18" fill="#231f20" font-family="Helvetica Neue">3.0bn
@@ -126,20 +126,20 @@
     </div>
   </div>
 
-  <div id="whatsapp-stats1" class="step slide right" data-x="0" data-y="1240">
+  <div id="whatsapp-stats1" class="step slide right" data-x="0" data-y="3660">
     <div class="content">
       <img src="img/whatsapp.png" />
     </div>
   </div>
-  <div id="whatsapp-stats2" class="step slide right" data-x="0" data-y="1380">
+  <div id="whatsapp-stats2" class="step slide right" data-x="0" data-y="3800">
     <div class="content">~1bn monthly active users</div>
   </div>
-  <div id="whatsapp-stats3" class="step slide right" data-x="0" data-y="1520">
+  <div id="whatsapp-stats3" class="step slide right" data-x="0" data-y="3940">
     <div class="content">195mins a week</div>
   </div>
 
   <!-- throw in the longer history of SMS and it's no wonder this is one of the most intuitive UIs around -->
-  <div id="conversational-ui" class="step slide right" data-x="0" data-y="1800">
+  <div id="conversational-ui" class="step slide right" data-x="0" data-y="4220">
     <div class="content">
       TODO
     </div>
@@ -197,7 +197,7 @@
   <div id="show-something" class="step slide left" data-x="0" data-y="1960">
     <div class="content">What does that actually look like?</div>
   </div>
-<!--
+
   <div id="make-banking-talk" class="step slide right" data-x="0" data-y="9340">
     <div class="content">
       <video src="img/make-banking-talk.mp4" preload="auto">
@@ -206,7 +206,7 @@
     </div>
   </div>
   <div id="make-banking-talk-play" class="step slide" data-x="0" data-y="9340">
-  </div>-->
+  </div>
 
   <div id="messenger-apis1" class="step slide left" data-x="0" data-y="1960">
     <div class="content">Slack and Telegram</div>
@@ -1561,25 +1561,25 @@
     targetEl.appendChild(canvas);
     activeEl.classList.remove("capture");
   }
-  //
-  // if (!Modernizr.getusermedia) {
-  //     console.error("getUserMedia() not supported");
-  // }
-  // else {
-  //   Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
-  //       function(stream) {
-  //         captureEl.setAttribute("src", window.URL.createObjectURL(stream));
-  //       },
-  //       function(error) {
-  //         console.error("error calling getUserMedia: ", error);
-  //       }
-  //   );
-  // }
+
+  if (!Modernizr.getusermedia) {
+      console.error("getUserMedia() not supported");
+  }
+  else {
+    Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
+        function(stream) {
+          captureEl.setAttribute("src", window.URL.createObjectURL(stream));
+        },
+        function(error) {
+          console.error("error calling getUserMedia: ", error);
+        }
+    );
+  }
 
   document.getElementById("impress")
           .addEventListener("impress:stepenter", function(e) {
             playVideo(e);
-            //captureImage(e);
+            captureImage(e);
           });
 </script>
 
