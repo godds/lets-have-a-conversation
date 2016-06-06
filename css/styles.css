@@ -53,49 +53,51 @@ body {
   right: -60px;
   border-left: 40px solid #ffffff;
 }
-#logo {
-  transition: all 0.6s;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left: -100px;
-  width: 200px;
-}
-#logo path,
-#logo rect {
-  fill: #231f20;
-}
-.impress-on-title #logo {
-  bottom: 250px;
-  margin-left: -200px;
-  width: 400px;
-}
-.impress-on-scott-logic #logo {
-  bottom: 50%;
-  margin-left: -250px;
-  width: 500px;
-}
-.impress-on-thank-you #logo {
-  bottom: 80%;
-  margin-left: -175px;
-  width: 350px;
-}
 video.capture {
   width: 720px;
   height: 540px;
   margin-left: -9999%;
 }
 #title {
-  height: 400px;
+  height: 500px;
   font-size: 2.1em;
 }
 #title > .content {
   width: 1120px;
 }
-.impress-on-title2 #title {
-  opacity: 1;
+#title > .sub-header {
+  font-size: 0.476em;
+  position: absolute;
+  top: 210px;
+  right: 0;
+  padding: 25px 40px;
+  margin: 0;
+  background-color: #ffffff;
 }
-.impress-on-scott-logic .step {
+#title > .sub-header:nth-child(3) {
+  top: 345px;
+}
+#title > .sub-header::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border: 20px solid transparent;
+  border-left: 40px solid #ffffff;
+  position: absolute;
+  right: -60px;
+  top: 10px;
+}
+.impress-on-scott-logic #title {
+  opacity: 0;
+}
+#scott-logic {
+  height: 250px;
+  font-size: 0;
+}
+#scott-logic > svg {
+  width: 500px;
+}
+#scott-logic.past {
   opacity: 0;
 }
 /* Set the Scene */
