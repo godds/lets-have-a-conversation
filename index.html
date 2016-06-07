@@ -272,11 +272,11 @@
 
   <!-- why care - 5 MINS -->
 
-  <div id="why-not-apps" class="step slide left" data-x="0" data-y="1960">
+  <div id="why-not-apps" class="step slide left" data-x="0" data-y="9540">
     <div class="content">Ok, but we already have apps and websites for commerce <span class="icon confused"></span></div>
   </div>
 
-  <div id="don-norman-quote" class="step slide right" data-x="0" data-y="10220">
+  <div id="don-norman-quote" class="step slide right" data-x="0" data-y="9890">
     <div class="content">
       <blockquote>
         <p>
@@ -288,14 +288,14 @@
         </p>
         <footer>
           <cite>
-            Don Norman <span class="date">in 1990</span>
+            &mdash; Don Norman <span class="date">in 1990</span>
           </cite>
         </footer>
       </blockquote>
     </div>
   </div>
 
-  <div id="history-of-computing" class="step slide right" data-x="0" data-y="15890">
+  <div id="history-of-computing" class="step slide right" data-x="0" data-y="10120">
     <div class="content">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 829.56 120">
         <path d="M264.23,97.13L245.8,78.69a4.06,4.06,0,0,0-5.74,5.74l11.5,11.5h-39a4.06,4.06,0,1,0,0,8.12h39l-11.5,11.5a4.06,4.06,0,0,0,5.74,5.74l18.44-18.44A4.06,4.06,0,0,0,264.23,97.13Z" transform="translate(-27 -40)" fill="#231f20"
@@ -312,7 +312,7 @@
     </div>
   </div>
 
-  <div id="cli-gui-nui" class="step slide right" data-x="0" data-y="16090">
+  <div id="cli-gui-nui" class="step slide right" data-x="0" data-y="10320">
     <div class="content">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 671.97 53.64">
         <path d="M260.58,62.13L242.15,43.69a4.06,4.06,0,1,0-5.74,5.74l11.5,11.5h-39a4.06,4.06,0,1,0,0,8.12h39l-11.5,11.5a4.06,4.06,0,1,0,5.74,5.74l18.44-18.44A4.06,4.06,0,0,0,260.58,62.13Z" transform="translate(-51.74 -36.38)" fill="#231f20"
@@ -328,12 +328,12 @@
     </div>
   </div>
 
-  <div id="natural-user-interface" class="step slide right" data-x="0" data-y="16220">
+  <div id="natural-user-interface" class="step slide right" data-x="0" data-y="10450">
     <div class="content">Natural User Interface</div>
   </div>
 
   <!-- lost card demo -->
-  <div id="lost-card-demo" class="step slide right" data-x="0" data-y="16370">
+  <div id="lost-card-demo" class="step slide right" data-x="0" data-y="10600">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.15 63.32">
       <path  fill="#231f20" d="M47.24,64.7h0S47.26,64.71,47.24,64.7Zm40.7-18.57L62,20.18a5.71,5.71,0,1,0-8.08,8.08L70.1,44.45H15.18a5.72,5.72,0,0,0,0,11.43H70.1L53.91,72.07A5.71,5.71,0,0,0,62,80.15L87.94,54.21A5.71,5.71,0,0,0,87.94,46.13Z" transform="translate(-9.46 -18.51)"/>
     </svg>
@@ -1535,19 +1535,19 @@
     activeEl.classList.remove("capture");
   }
 
-  if (!Modernizr.getusermedia) {
-      console.error("getUserMedia() not supported");
-  }
-  else {
-    Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
-        function(stream) {
-          captureEl.setAttribute("src", window.URL.createObjectURL(stream));
-        },
-        function(error) {
-          console.error("error calling getUserMedia: ", error);
-        }
-    );
-  }
+  // if (!Modernizr.getusermedia) {
+  //     console.error("getUserMedia() not supported");
+  // }
+  // else {
+  //   Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
+  //       function(stream) {
+  //         captureEl.setAttribute("src", window.URL.createObjectURL(stream));
+  //       },
+  //       function(error) {
+  //         console.error("error calling getUserMedia: ", error);
+  //       }
+  //   );
+  // }
 
   document.getElementById("impress")
           .addEventListener("impress:stepenter", function(e) {
