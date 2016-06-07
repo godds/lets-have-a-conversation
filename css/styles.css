@@ -384,6 +384,47 @@ video.capture {
   width: 900px;
 }
 /* Interaction Types */
+#enough-tech,
+#different-interactions {
+  height: 120px;
+}
+#imperative-interactions {
+  height: 160px;
+  font-size: 0;
+}
+#imperative-interactions > .content {
+  width: 200px;
+}
+#slash-command-demo {
+  height: 200px;
+  font-size: 0;
+}
+#slash-command-demo svg {
+  width: 100px;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+}
+#conversational-interactions {
+  height: 160px;
+  font-size: 0;
+}
+#conversational-interactions > .content {
+  width: 250px;
+}
+#not-chat {
+  height: 150px;
+}
+#barber-demo {
+  height: 200px;
+  font-size: 0;
+}
+#barber-demo svg {
+  width: 100px;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+}
 #slack {
   height: 200px;
   font-size: 0;
