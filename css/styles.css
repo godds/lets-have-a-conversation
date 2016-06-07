@@ -425,136 +425,17 @@ video.capture {
   position: absolute;
   right: 0;
 }
-#slack {
-  height: 200px;
-  font-size: 0;
-}
-#slack > .content img {
-  width: 450px;
-}
-#so-what {
+#structured-content1 {
   height: 200px;
 }
-#in-context1 {
-  height: 200px;
-  font-size: 0;
-}
-#in-context1 > .content {
-  width: 1000px;
-}
-#in-context2 {
-  height: 200px;
-  font-size: 0;
-}
-#in-context2 > .content {
-  width: 550px;
-}
-#evidence-of-convenience {
-  height: 650px;
-}
-#evidence-of-convenience > .content {
-  width: 850px;
-}
-/* Conversation */
-#making-it-conversational {
-  height: 200px;
-}
-#choose-your-own-adventure {
+#structured-content2 {
   height: 700px;
   font-size: 0;
 }
-#choose-your-own-adventure > .content img {
-  width: 400px;
+#structured-content2 > .content {
+  width: 1050px;
 }
-#monkey-island {
-  height: 700px;
-  font-size: 0;
-}
-#monkey-island > .content img {
-  width: 1000px;
-}
-#product-hunt,
-#product-hunt-play {
-  height: 800px;
-}
-#product-hunt > .content,
-#product-hunt-play > .content {
-  width: 1000px;
-}
-#product-hunt > .content > video,
-#product-hunt-play > .content > video {
-  width: 100%;
-}
-#build-chat-app,
-#build-on-existing-apps {
-  height: 200px;
-}
-#slash-pa-demo {
-  height: 200px;
-  font-size: 0;
-}
-#slash-pa-demo svg {
-  width: 100px;
-  opacity: 0.5;
-  position: absolute;
-  right: 0;
-}
-/* Security */
-#what-about-security {
-  height: 200px;
-}
-#malice {
-  height: 300px;
-  font-size: 0;
-}
-#malice > .content {
-  width: 250px;
-}
-#limits {
-  height: 200px;
-}
-#touchid {
-  height: 500px;
-  font-size: 0;
-}
-#touchid > .content img {
-  width: 700px;
-}
-#cloud {
-  height: 700px;
-  font-size: 0;
-}
-#cloud > .content {
-  width: 900px;
-}
-#sms-contactless {
-  height: 200px;
-}
-#cloud2 {
-  height: 300px;
-  font-size: 0;
-}
-#cloud2 > .content {
-  width: 300px;
-}
-#channel-shifting {
-  height: 500px;
-  font-size: 0;
-}
-#channel-shifting > .content img {
-  width: 500px;
-}
-#slash-channel-shifting-demo {
-  height: 200px;
-  font-size: 0;
-}
-#slash-channel-shifting-demo svg {
-  width: 100px;
-  opacity: 0.5;
-  position: absolute;
-  right: 0;
-}
-/* why conversation */
+/* Why Conversation */
 #why-conversation {
   height: 300px;
 }
@@ -564,15 +445,18 @@ video.capture {
 #low-hanging-fruit {
   height: 200px;
 }
-#slash-panic-demo {
-  height: 200px;
+#viv,
+#viv-play {
+  height: 800px;
   font-size: 0;
 }
-#slash-panic-demo svg {
-  width: 100px;
-  opacity: 0.5;
-  position: absolute;
-  right: 0;
+#viv > .content,
+#viv-play > .content {
+  width: 1100px;
+}
+#viv > .content > video,
+#viv-play > .content > video {
+  width: 100%;
 }
 /* Summary */
 #title-summary {
