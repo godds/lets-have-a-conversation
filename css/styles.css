@@ -152,7 +152,7 @@ video.capture {
   font-size: 0;
 }
 #conversational-ui > .content img {
-  width: 350px;
+  width: 400px;
 }
 /* Commerce */
 #thats-nice {
@@ -179,7 +179,6 @@ video.capture {
   font-size: 0;
 }
 #human-commerce > .content img {
-  width: 640px;
   height: 480px;
 }
 /* ConvComm */
@@ -447,7 +446,7 @@ video.capture {
 }
 #viv,
 #viv-play {
-  height: 800px;
+  height: 700px;
   font-size: 0;
 }
 #viv > .content,
@@ -459,28 +458,53 @@ video.capture {
   width: 100%;
 }
 /* Summary */
-#title-summary {
+#personal-relationship {
   height: 200px;
 }
-#should-be {
-  height: 200px;
+#service-as-contact {
+  height: 750px;
+  font-size: 0;
 }
-#omni-channel-touching {
-  height: 700px;
+#service-as-contact > .content img {
+  width: 400px;
 }
-#omni-channel-touching > .content {
-  width: 800px;
+#great-power {
+  height: 250px;
 }
-#omni-channel-embracing {
+#great-power > .content blockquote {
+  padding: 0 20px;
+  margin: 20px 0;
+  font-size: 0.8em;
+  border-left: 10px solid rgba(35, 31, 32, 0.25);
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+#great-power > .content blockquote:before {
+  color: rgba(35, 31, 32, 0.4);
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+#great-power > .content blockquote p {
+  display: inline;
+  font-style: italic;
+}
+#great-power > .content blockquote p em {
+  font-style: normal;
+}
+#great-power > .content blockquote footer cite {
+  font-size: 0.4em;
+  font-style: normal;
+}
+#wild-west {
   height: 600px;
+  font-size: 0;
 }
-#omni-channel-embracing > .content {
-  width: 680px;
+#wild-west > .content img {
+  width: 700px;
 }
-#its-up-to-you {
-  height: 200px;
-}
-#agree {
+#just-another-channel,
+#join-the-conversation {
   height: 200px;
 }
 #thank-you {

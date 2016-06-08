@@ -180,7 +180,7 @@ video.capture {
   height: 750px;
   font-size: 0;
   > .content img {
-    width: 350px;
+    width: 400px;
   }
 }
 
@@ -211,7 +211,6 @@ video.capture {
   height: 600px;
   font-size: 0;
   > .content img {
-    width: 640px;
     height: 480px;
   }
 }
@@ -529,7 +528,7 @@ video.capture {
 
 #viv,
 #viv-play {
-  height: 800px;
+  height: 700px;
   font-size: 0;
   > .content {
     width: 1100px;
@@ -544,36 +543,69 @@ video.capture {
 
 /* Summary */
 
-#title-summary {
+#personal-relationship {
   height: 200px;
 }
 
-#should-be {
-  height: 200px;
-}
-
-#omni-channel-touching {
-  height: 700px;
-  > .content {
-    width: 800px
+#service-as-contact {
+  height: 750px;
+  font-size: 0;
+  > .content img {
+    width: 400px;
   }
 }
 
-#omni-channel-embracing {
+#great-power {
+  height: 250px;
+  > .content {
+
+    blockquote {
+      padding: 0 20px;
+      margin: 20px 0;
+      font-size: 0.8em;
+      border-left: 10px solid fade(@black, 25%);
+      quotes: "\201C""\201D""\2018""\2019";
+
+      &:before {
+        color: fade(@black, 40%);
+        content: open-quote;
+        font-size: 3em;
+        line-height: 0.1em;
+        vertical-align: -0.4em;
+      }
+      p {
+        display: inline;
+        font-style: italic;
+        em {
+          font-style: normal;
+        }
+      }
+      footer {
+        cite {
+          font-size: 0.4em;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+#wild-west {
   height: 600px;
-  > .content {
-    width: 680px;
+  font-size: 0;
+  > .content img {
+    width: 700px;
   }
 }
 
-#its-up-to-you {
+#just-another-channel,
+#join-the-conversation {
   height: 200px;
 }
 
-#agree {
-  height: 200px;
-}
+#capture-collage {
 
+}
 
 #thank-you {
   text-align: center;
