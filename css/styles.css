@@ -507,6 +507,61 @@ video.capture {
 #join-the-conversation {
   height: 200px;
 }
+#capture-collage {
+  height: 400px;
+}
+#capture-collage > .content {
+  width: 1024px;
+  height: 383px;
+}
+#capture-collage .convcomm-letter {
+  width: 640px;
+  height: 480px;
+  display: inline-block;
+  position: absolute;
+  transform: scale(0.4);
+  transform-origin: top left;
+}
+#capture-collage .convcomm-letter:nth-child(1) {
+  top: 25px;
+  left: 40px;
+  background-color: green;
+}
+#capture-collage .convcomm-letter:nth-child(2) {
+  top: 25px;
+  left: 296px;
+  background-color: blue;
+}
+#capture-collage .convcomm-letter:nth-child(3) {
+  top: 25px;
+  left: 552px;
+  background-color: red;
+}
+#capture-collage .convcomm-letter:nth-child(4) {
+  top: 25px;
+  left: 808px;
+  background-color: black;
+}
+#capture-collage .convcomm-letter:nth-child(5) {
+  top: 216px;
+  left: 40px;
+  background-color: purple;
+}
+#capture-collage .convcomm-letter:nth-child(6) {
+  top: 216px;
+  left: 296px;
+  background-color: orange;
+}
+#capture-collage .convcomm-letter:nth-child(7) {
+  top: 216px;
+  left: 552px;
+  background-color: yellow;
+}
+#capture-collage .convcomm-letter:nth-child(8) {
+  top: 216px;
+  left: 808px;
+  background-color: cyan;
+}
 #thank-you {
   text-align: center;
 }

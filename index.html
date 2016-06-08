@@ -175,6 +175,8 @@
   </div>
 
 
+
+
   <!-- ConvComm - 5 MINS -->
 
   <div id="convcomm" class="step slide right" data-x="0" data-y="6980">
@@ -654,9 +656,9 @@
         Your browser does not support the <code>video</code> element.
       </video>
     </div>
-  </div><!--
+  </div>
   <div id="viv-play" class="step slide" data-x="0" data-y="16720">
-  </div>-->
+  </div>
 
 
   <!-- summary -->
@@ -702,13 +704,11 @@
     <div class="content">Join the conversation #ConvComm</div>
   </div>
 
-  <div id="capture-collage" class="step slide left" data-x="0" data-y="19500">
-    <div class="content">
-      TODO
-    </div>
+  <div id="capture-collage" class="step slide left" data-x="0" data-y="19230">
+    <div id="capture-collage-result" class="content"></div>
   </div>
 
-  <div id="thank-you" class="step slide" data-x="0" data-y="19500">
+  <div id="thank-you" class="step slide" data-x="0" data-y="19900">
     <h1>Thank you</h1>
     <h2>Graham Odds</h2>
     <h3>@g_odds</h3>
@@ -734,7 +734,8 @@
   }
 
 
-  var captureEl = document.getElementsByClassName("capture")[0];
+  var captureEl = document.getElementsByClassName("capture")[0],
+      letters = ["v","c","o","m","oo","n"];
 
   function captureImage(e) {
     if (!captureEl) {
@@ -756,6 +757,7 @@
     }
     var canvas = document.createElement("canvas");
     canvas.classList.add("capture-result");
+    canvas.classList.add(letters.shift());
     canvas.setAttribute("width", captureEl.videoWidth);
     canvas.setAttribute("height", captureEl.videoHeight);
     canvas.getContext("2d").drawImage(captureEl, 0, 0);
@@ -763,24 +765,53 @@
     activeEl.classList.remove("capture");
   }
 
-  // if (!Modernizr.getusermedia) {
-  //     console.error("getUserMedia() not supported");
-  // }
-  // else {
-  //   Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
-  //       function(stream) {
-  //         captureEl.setAttribute("src", window.URL.createObjectURL(stream));
-  //       },
-  //       function(error) {
-  //         console.error("error calling getUserMedia: ", error);
-  //       }
-  //   );
-  // }
+  function createCollage(e) {
+    if (e.srcElement.id != "join-the-conversation") {
+      return;
+    }
+    var targetEl = document.getElementById("capture-collage-result");
+    if (!targetEl) {
+      console.error("no capture collage target element found");
+      return;
+    }
+    cloneCapture(document.getElementsByClassName("capture-result c")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result o")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result n")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result v")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result c")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result oo")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result m")[0], targetEl);
+    cloneCapture(document.getElementsByClassName("capture-result m")[0], targetEl);
+  }
+
+  function cloneCapture(el, letter, targetEl) {
+    var canvas = document.createElement("canvas");
+    canvas.classList.add("convcomm-letter");
+    canvas.setAttribute("width", el.width);
+    canvas.setAttribute("height", el.height);
+    canvas.getContext("2d").drawImage(el, 0, 0);
+    targetEl.appendChild(canvas);
+  }
+
+  if (!Modernizr.getusermedia) {
+      console.error("getUserMedia() not supported");
+  }
+  else {
+    Modernizr.prefixed('getUserMedia', navigator)({video: true, audio: false},
+        function(stream) {
+          captureEl.setAttribute("src", window.URL.createObjectURL(stream));
+        },
+        function(error) {
+          console.error("error calling getUserMedia: ", error);
+        }
+    );
+  }
 
   document.getElementById("impress")
           .addEventListener("impress:stepenter", function(e) {
             playVideo(e);
             captureImage(e);
+            createCollage(e);
           });
 </script>
 

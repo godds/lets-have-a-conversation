@@ -604,7 +604,62 @@ video.capture {
 }
 
 #capture-collage {
+  height: 400px;
 
+  > .content {
+    width: 1024px;
+    height: 383px;
+  }
+
+  .convcomm-letter {
+    width: 640px;
+    height: 480px;
+    display: inline-block;
+    position: absolute;
+    transform: scale(0.4);
+    transform-origin: top left;
+
+    &:nth-child(1) {
+      top: 25px;
+      left: 40px;
+      background-color: green;
+    }
+    &:nth-child(2) {
+      top: 25px;
+      left: 296px;
+      background-color: blue;
+    }
+    &:nth-child(3) {
+      top: 25px;
+      left: 552px;
+      background-color: red;
+    }
+    &:nth-child(4) {
+      top: 25px;
+      left: 808px;
+      background-color: black;
+    }
+    &:nth-child(5) {
+      top: 216px;
+      left: 40px;
+      background-color: purple;
+    }
+    &:nth-child(6) {
+      top: 216px;
+      left: 296px;
+      background-color: orange;
+    }
+    &:nth-child(7) {
+      top: 216px;
+      left: 552px;
+      background-color: yellow;
+    }
+    &:nth-child(8) {
+      top: 216px;
+      left: 808px;
+      background-color: cyan;
+    }
+  }
 }
 
 #thank-you {
